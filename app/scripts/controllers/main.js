@@ -1,6 +1,6 @@
 'use strict';
 
-gumpApp.controller('MainCtrl', function ($scope) {
+gumpApp.controller('MainCtrl', ['$scope', function ($scope) {
   var player1 = {
     firstName: 'Hubert',
     lastName: 'SABLONNIERE',
@@ -16,4 +16,4 @@ gumpApp.controller('MainCtrl', function ($scope) {
 
   $scope.player1 = player1;
   $scope.player2 = player2;
-});
+}]);
