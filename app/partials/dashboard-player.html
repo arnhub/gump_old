@@ -1,0 +1,19 @@
+<section class="player player-{{number}}">
+  <header class="header">
+    <div class="avatar">
+      <img data-ng-src="{{player.email|gravatar}}" alt="avatar">
+    </div>
+    <div class="name">
+      <span class="firstName">{{player.firstName}}</span>
+      <span class="lastName">{{player.lastName}}</span>
+    </div>
+  </header>
+  <div class="infos">
+    <div class="score">{{player.score}}</div>
+    <div class="qrcode">
+      <img
+          src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Qrcode_wikipedia_fr.jpg/200px-Qrcode_wikipedia_fr.jpg"
+          alt="qrcode">
+    </div>
+  </div>
+</section>
