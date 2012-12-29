@@ -1,0 +1,131 @@
+$header-height: 200px;
+$header-gutter: 20px;
+$middle-border: 1px solid #FFF;
+
+$infos-size: 300px;
+
+.player {
+  background: #000;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 50%;
+}
+
+.player .header {
+  height: $header-height;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .avatar {
+    height: $header-height - 2 * $header-gutter;
+    position: absolute;
+    top: $header-gutter;
+    width: $header-height - 2 * $header-gutter;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .name {
+    height: $header-height - 2 * $header-gutter;
+    position: absolute;
+    top: $header-gutter;
+  }
+
+  .firstName {
+    text-transform: capitalize;
+  }
+
+  .lastName {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .firstName,
+  .lastName {
+    color: #FFF;
+    display: block;
+    font-size: 50px;
+    height: ($header-height - 2 * $header-gutter) / 2;
+    line-height: ($header-height - 2 * $header-gutter) / 2;
+  }
+}
+
+.player .infos {
+  bottom: 0;
+  position: absolute;
+  top: $header-height;
+  width: 100%;
+
+  .score {
+  }
+
+  .qrcode {
+    display: none;
+  }
+
+  .qrcode,
+  .score {
+    color: #FFF;
+    font-size: 300px;
+    font-weight: bold;
+    height: $infos-size;
+    line-height: $infos-size;
+    margin-top: -$infos-size / 2;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+
+    img {
+      height: $infos-size;
+      width: $infos-size;
+    }
+  }
+}
+
+.player-1 {
+  border-right: $middle-border;
+  left: 0;
+
+  .header {
+    .avatar {
+      left: $header-gutter;
+    }
+
+    .name {
+      left: $header-height;
+      right: $header-gutter;
+    }
+
+    .firstName,
+    .lastName {
+      text-align: left;
+    }
+  }
+}
+
+.player-2 {
+  border-left: $middle-border;
+  right: 0;
+
+  .header {
+    .avatar {
+      right: $header-gutter;
+    }
+
+    .name {
+      left: $header-gutter;
+      right: $header-height;
+    }
+
+    .firstName,
+    .lastName {
+      text-align: right;
+    }
+  }
+}
