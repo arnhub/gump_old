@@ -1,15 +1,23 @@
 'use strict';
 
-gumpApp.directive('dashboardPlayer', function() {
+gumpApp.directive('dashboardPlayer', function () {
   return {
     templateUrl: './partials/dashboard-player.html',
-    scope: {
+    scope      : {
       player: '=',
       number: '='
+    },
+    link       : function (scope, element, attrs) {
+      scope.$watch('player.key', function (key) {
+        if (key != undefined) {
+          $('.qrcode', element).empty().qrcode({
+            render: 'div',
+            height: 300,
+            width: 300,
+            text: 'http://10.2.17.179:3501/?socketIoPort=8080#/player/1?key=' + key
+          });
+        }
+      });
     }
-//    link: function postLink(scope, element, attrs) {
-//      console.log(scope, element, attrs);
-////      element.text('this is the dashboardPlayer directive');
-//    }
   };
 });

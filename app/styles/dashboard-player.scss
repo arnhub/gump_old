@@ -61,26 +61,29 @@ $infos-size: 300px;
   top: $header-height;
   width: 100%;
 
-  .score {
-  }
-
   .qrcode,
   .score {
+    border: 10px solid #FFF;
     color: #FFF;
     font-size: 300px;
     font-weight: bold;
     height: $infos-size;
+    left: 50%;
     line-height: $infos-size;
+    margin-left: -$infos-size / 2;
     margin-top: -$infos-size / 2;
     position: absolute;
-    text-align: center;
     top: 50%;
-    width: 100%;
+    width: $infos-size;
 
     img {
       height: $infos-size;
       width: $infos-size;
     }
+  }
+
+  .qrcode {
+    background: #FFF;
   }
 }
 
