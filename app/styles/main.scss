@@ -1,2 +1,11 @@
 @import "compass_twitter_bootstrap";
 @import "dashboard-player";
+@import "player-form";
+
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  max-width: 940px;
+  width: 100%;
+}

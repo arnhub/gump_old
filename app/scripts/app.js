@@ -7,6 +7,10 @@ var gumpApp = angular.module('gumpApp', [])
         templateUrl: 'views/dashboard.html',
         controller : 'MainCtrl'
       })
+      .when('/player/:id', {
+        templateUrl: 'views/player.html',
+        controller: 'PlayerCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
